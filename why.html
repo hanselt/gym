@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Intensity gym & fitness</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Intensity gym & fitness
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="why.html"> Rutina </a>
+                </li>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="trainer.html"> trainers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html"> Contact Us</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!-- Us section -->
+
+  <section class="trainer_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Plan de Rutina Semanal</h2>
+      </div>
+      <!-- botones x dia-->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-6 mx-auto"> 
+            <div class="box">
+              <div class="social_box">
+                <a href="javascript:void(0);" onclick="mostrarRutina('lunes')">L</a>
+                <a href="javascript:void(0);" onclick="mostrarRutina('martes')">M</a>
+                <a href="javascript:void(0);" onclick="mostrarRutina('miercoles')">M</a>
+                <a href="javascript:void(0);" onclick="mostrarRutina('jueves')">J</a>
+                <a href="javascript:void(0);" onclick="mostrarRutina('viernes')">V</a>
+                <a href="javascript:void(0);" onclick="mostrarRutina('sabado')">S</a>
+                <a href="javascript:void(0);" onclick="mostrarRutina('domingo')">D</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Botones de selección por día -->
+      
+  
+      <!-- Contenedor de rutinas por día -->
+      <div id="contenedorRutina">
+        <!-- Las tablas se llenarán dinámicamente con JS -->
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- end us section -->
+
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="info_items">
+        <a href="">
+          <div class="item ">
+            <div class="img-box box-1">
+              <img src="" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                Location
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="item ">
+            <div class="img-box box-2">
+              <img src="" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                +02 1234567890
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="item ">
+            <div class="img-box box-3">
+              <img src="" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                demo@gmail.com
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 2020 All Rights Reserved. Design by
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+    const datosRutina = [
+      { dia: "lunes", ejercicio: "Remo maquina", parte: "espalda", serie: 4, rep: "10-12" },
+      { dia: "lunes", ejercicio: "Remo sentado", parte: "espalda", serie: 4, rep: "10-12" },
+      { dia: "lunes", ejercicio: "Pull down prono supino", parte: "espalda", serie: 4, rep: "12" },
+      { dia: "lunes", ejercicio: "Pull cloud circulo", parte: "espalda", serie: 4, rep: "12" },
+      { dia: "lunes", ejercicio: "Curl biceps Mancuerna", parte: "biceps", serie: 4, rep: "10" },
+      { dia: "lunes", ejercicio: "Curl martillo", parte: "biceps", serie: 4, rep: "10" },
+    
+      { dia: "martes", ejercicio: "Sentadilla libre p/c", parte: "piernas", serie: 4, rep: "15-20" },
+      { dia: "martes", ejercicio: "Prensa 45", parte: "piernas", serie: 4, rep: "10-12" },
+      { dia: "martes", ejercicio: "Leg extensión", parte: "piernas", serie: 4, rep: "10-12" },
+      { dia: "martes", ejercicio: "Sentadilla sissy", parte: "piernas", serie: 3, rep: "10" },
+      { dia: "martes", ejercicio: "Adductor maquina", parte: "piernas", serie: 4, rep: "20" },
+      { dia: "martes", ejercicio: "Elevación talones sentado parado", parte: "piernas", serie: 4, rep: "15" },
+    
+      { dia: "miercoles", ejercicio: "Maquina Abs", parte: "abdominal", serie: 4, rep: "20" },
+      { dia: "miercoles", ejercicio: "Crunches", parte: "abdominal", serie: 4, rep: "20" },
+      { dia: "miercoles", ejercicio: "Elev-piernas ciso", parte: "abdominal", serie: 4, rep: "30/60" },
+      { dia: "miercoles", ejercicio: "Plank", parte: "abdominal", serie: 4, rep: "30/60" },
+      { dia: "miercoles", ejercicio: "Press militar", parte: "hombro", serie: 4, rep: "12" },
+      { dia: "miercoles", ejercicio: "Elevacion lateral", parte: "hombro", serie: 4, rep: "15" },
+      { dia: "miercoles", ejercicio: "Face pull", parte: "hombro", serie: 4, rep: "15" },
+    
+      { dia: "jueves", ejercicio: "Press inclinado barra", parte: "pecho", serie: 4, rep: "10" },
+      { dia: "jueves", ejercicio: "Press plano barra", parte: "pecho", serie: 4, rep: "10" },
+      { dia: "jueves", ejercicio: "Press declinado barra", parte: "pecho", serie: 4, rep: "10" },
+      { dia: "jueves", ejercicio: "Peck deck", parte: "pecho", serie: 3, rep: "15" },
+      { dia: "jueves", ejercicio: "Triceps polea", parte: "triceps", serie: 4, rep: "10" },
+      { dia: "jueves", ejercicio: "Copa triceps", parte: "triceps", serie: 4, rep: "12" },
+    
+      { dia: "viernes", ejercicio: "Leg curl", parte: "piernas", serie: 4, rep: "10-12" },
+      { dia: "viernes", ejercicio: "Lunges c/recorrido", parte: "piernas", serie: 4, rep: "10-12" },
+      { dia: "viernes", ejercicio: "Sumo", parte: "piernas", serie: 4, rep: "12-15" },
+      { dia: "viernes", ejercicio: "Abductor maquina", parte: "piernas", serie: 4, rep: "20" },
+      { dia: "viernes", ejercicio: "Hip thrust", parte: "piernas", serie: 4, rep: "10" },
+    
+      { dia: "sabado", ejercicio: "Running", parte: "piernas", serie: 1, rep: "30min" },
+      { dia: "sabado", ejercicio: "Futbol", parte: "piernas", serie: 1, rep: "120min" },
+      { dia: "domingo", ejercicio: "Descanso e hidratacion", parte: "todo", serie: 1, rep: "24h" }
+    ];
+    
+    function mostrarRutina(dia) {
+      const contenedor = document.getElementById("contenedorRutina");
+      const rutinaDelDia = datosRutina.filter(item => item.dia === dia);
+    
+      if (rutinaDelDia.length === 0) {
+        contenedor.innerHTML = `<div class="box text-center"><p>No hay rutina registrada para este día.</p></div>`;
+        return;
+      }
+    
+      let tablaHTML = `
+      <div class="row">
+       <div class="col-lg-12 col-md-6 mx-auto">
+        <div class="box">
+          <div class="name">
+          <h3 class="text-center text-uppercase mb-3">Rutina del ${dia.charAt(0).toUpperCase() + dia.slice(1)}</h3>
+          </div>
+          <div class="img-box" style="max-width: 100%;">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered text-center">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Ejercicio</th>
+                  <th>Zona</th>
+                  <th>Serie</th>
+                  <th>Repeticiones</th>
+                </tr>
+              </thead>
+              <tbody>
+      `;
+    
+      rutinaDelDia.forEach(item => {
+        tablaHTML += `
+          <tr style="color:white;">
+            <td>${item.ejercicio}</td>
+            <td>${item.parte}</td>
+            <td>${item.serie}</td>
+            <td>${item.rep}</td>
+          </tr>
+        `;
+      });
+    
+      tablaHTML += `
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+       </div>
+      </div>
+      `;
+    
+      contenedor.innerHTML = tablaHTML;
+    }
+    
+    // Mostrar por defecto el lunes
+    document.addEventListener("DOMContentLoaded", function () {
+      mostrarRutina("lunes");
+    });
+    </script>
+    
+
+</body>
+
+</html>
